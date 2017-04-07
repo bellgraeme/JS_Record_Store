@@ -18,11 +18,19 @@ beforeEach(function(){
   record3 = new  Record('Green Day', 'Dookie', 'Punk', 6);
   record4 = new  Record('Beatles','Sg Peppers','Pop', 8);
   record5 = new  Record('Nirvana','In Bloom','Grunge', 9);
-})
+});
 
 it('should be able to accept new records', function(){
       store.addRecord(record5);
       assert.strictEqual(1, store.inventory.length)
-})
+});
+
+it('should be able to print out record details',
+  function(){
+    store.addRecord(record5);
+    assert.strictEqual('Artist: Nirvana Title: In Bloom  Genere: Grunge Price: 9', store.printDetails())
+  })
+
+
 
 })

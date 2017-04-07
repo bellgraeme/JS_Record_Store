@@ -9,7 +9,11 @@ var Store = function(name, city) {
     addRecord: function(record){
       this.inventory.push(record);
     },
-    
+    printDetails: function(){
+      this.inventory.forEach(function(album){
+        console.log('Artist:', album.artist, '\n Title:', album.title, '\n Genere:', album.genre, '\n Price:', album.price, '\n')
+      })
+    }
 
   }
 
@@ -19,4 +23,4 @@ var Store = function(name, city) {
 
 
 
-  module.exports= Store;
+  module.exports = Store;
